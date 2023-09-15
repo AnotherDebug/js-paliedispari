@@ -83,6 +83,11 @@ console.log(utente);
 let pc = randomizer(min, max);
 console.log(pc);
 
+
+
+
+
+
 //2.
 /**
  *
@@ -92,3 +97,16 @@ console.log(pc);
 function randomizer(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
+
+
+//5.
+/**
+ * 
+ * @param {number} n1 
+ * @param {number} n2 
+ * @returns 
+ */
+function sum(n1,n2) {
+  const somma = n1 + n2;
+  return sum;
+};
