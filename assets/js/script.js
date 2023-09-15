@@ -14,32 +14,37 @@
     Utilizzo quindi il metodo .split(), .reverse(), .join();
    c. Confronto attraverso un controllo se la prima variabile con la seconda per verificare effettivamente se la stringa corrisponde perfettamente al contrario;
 
-3. Stampo il risultato corrispondente
+3. Stampo il risultato corrispondente;
 */
 
-// 1. 
-const requestWord = prompt('Inserisci una parola');
-
+// 1.
+const requestWord = prompt("Inserisci una parola");
 
 palindroma(requestWord);
 
-// 2. 
-function palindroma (string) {
-    //2. a.
-    if(isNaN(string)) {
+
+
+
+
+/**
+ * 
+ * @param {string} string 
+ */
+// 2.
+function palindroma(string) {
+  //2. a.
+  if (isNaN(string)) {
     //2. b.
-const revRequestWord = requestWord.split('').reverse().join('');
-console.log(revRequestWord);
-if(revRequestWord === requestWord) {
-    console.log('La parola è palindroma');
-}else{
-    console.log('La parola non è palindroma');
-};
-
-console.log('CORRETTO: è una stringa');
-    }else{
-        console.log('ERRORE: Devi inserire una stringa');
-    };
-    
-};
-
+    const revRequestWord = requestWord.split("").reverse().join("");
+    console.log(revRequestWord);
+    //2. c.
+    if (revRequestWord === requestWord) {
+      console.log("La parola è palindroma");
+    } else {
+      console.log("La parola non è palindroma");
+    }
+    console.log("CORRETTO: è una stringa");
+  } else {
+    console.log("ERRORE: Devi inserire una stringa");
+  }
+}
