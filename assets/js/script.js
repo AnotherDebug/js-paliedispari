@@ -21,33 +21,33 @@
 
 */
 
-// 1.
-// const requestWord = prompt("Inserisci una parola");
+1;
+const requestWord = prompt("Inserisci una parola");
 
-// palindroma(requestWord);
+palindroma(requestWord);
 
-// /**
-//  *
-//  * @param {string} string
-//  */
-// // 2.
-// function palindroma(string) {
-//   //2. a.
-//   if (isNaN(string)) {
-//     //2. b.
-//     const revRequestWord = requestWord.split("").reverse().join("");
-//     console.log(revRequestWord);
-//     //2. c.
-//     if (revRequestWord === requestWord) {
-//       console.log("La parola è palindroma");
-//     } else {
-//       console.log("La parola non è palindroma");
-//     }
-//     console.log("CORRETTO: è una stringa");
-//   } else {
-//     console.log("ERRORE: Devi inserire una stringa");
-//   }
-// }
+/**
+ *
+ * @param {string} string
+ */
+// 2.
+function palindroma(string) {
+  //2. a.
+  if (isNaN(string)) {
+    //2. b.
+    const revRequestWord = requestWord.split("").reverse().join("");
+    console.log(revRequestWord);
+    //2. c.
+    if (revRequestWord === requestWord) {
+      console.log("La parola è palindroma");
+    } else {
+      console.log("La parola non è palindroma");
+    }
+    console.log("CORRETTO: è una stringa");
+  } else {
+    console.log("ERRORE: Devi inserire una stringa");
+  }
+}
 
 /* 
 ## Pari e Dispari ##
@@ -91,21 +91,17 @@ const result = sum(numUtente, numPc);
 console.log(result);
 
 //7.
-if(isNaN(pariDispari) && pariDispari === "pari") {
-if(result % 2 === 0 && pariDispari === "pari") {
-console.log('Vince il l\'utente');
-}else if(result % 2 && pariDispari === "dispari"){
-  console.log('Vince il l\'utente');
-}else{
-  console.log('Vince il PC');
-};
-console.log(somma);
-}else{
-  console.log('Inserire \"pari\" o "dispari"');
-};
-
-
-
+if (isNaN(pariDispari) && pariDispari === "pari") {
+  if (result % 2 === 0 && pariDispari === "pari") {
+    console.log("Vince il l'utente");
+  } else if (result % 2 && pariDispari === "dispari") {
+    console.log("Vince il l'utente");
+  } else {
+    console.log("Vince il PC");
+  }
+} else {
+  console.log('Inserire "pari" o "dispari"');
+}
 
 //2.
 /**
@@ -117,15 +113,14 @@ function randomizer(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-
 //5.
 /**
- * 
- * @param {number} n1 
- * @param {number} n2 
- * @returns 
+ *
+ * @param {number} n1
+ * @param {number} n2
+ * @returns
  */
-function sum(n1,n2) {
+function sum(n1, n2) {
   const somma = n1 + n2;
   return somma;
-};
+}
