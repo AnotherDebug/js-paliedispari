@@ -26,9 +26,13 @@ palindroma(requestWord);
 // 2. 
 function palindroma (string) {
     if(isNaN(string)) {
-const RevRequestWord = requestWord.split('').reverse().join('');
+const revRequestWord = requestWord.split('').reverse().join('');
+console.log(revRequestWord);
+
 console.log('CORRETTO: è una stringa');
     }else{
         console.log('ERRORE: Devi inserire una stringa');
     };
+    
 };
+
