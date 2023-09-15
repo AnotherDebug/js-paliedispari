@@ -1,0 +1,51 @@
+/*************************************************
+    GENERAL STYLES
+ *************************************************/
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+/************************************************
+    UTILITIES
+ ************************************************/
+
+.container {
+    width: 60%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.d-flex {
+    display: flex;
+}
+
+
+/* !"DEBUG" DA ELIMINARE TERMINATO IL CODICE*/
+.debug {
+    background-color: rgba(0, 102, 255, 0.5);
+    border: 1px solid #000;
+}
+
+
+
+
+/************************************************
+    SITE SECTIONS
+ ************************************************/
+
+
+ .container .palindroma{
+    margin-top: 100px;
+ }
+
+ .container .pariDispari{
+    margin-top: 300px;
+ }
