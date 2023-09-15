@@ -21,7 +21,19 @@
 
 */
 
-1;
+// Riferimenti
+const palindromaRef = document.getElementById('palindroma');
+const pariDispariRef = document.getElementById('pariDispari');
+
+
+
+
+
+
+
+
+
+//1.
 const requestWord = prompt("Inserisci una parola");
 
 palindroma(requestWord);
