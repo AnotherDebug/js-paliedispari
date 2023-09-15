@@ -23,15 +23,6 @@
 
 // Riferimenti
 const palindromaRef = document.getElementById('palindroma');
-const pariDispariRef = document.getElementById('pariDispari');
-
-
-
-
-
-
-
-
 
 //1.
 const requestWord = prompt("Inserisci una parola");
@@ -51,8 +42,10 @@ function palindroma(string) {
     console.log(revRequestWord);
     //2. c.
     if (revRequestWord === requestWord) {
+      palindromaRef.innerHTML = `Hai inserito la parola "${requestWord}", dal controllo effettuato, "${revRequestWord}" è palindroma!`;
       console.log("La parola è palindroma");
     } else {
+      palindromaRef.innerHTML = `Hai inserito la parola "${requestWord}", dal controllo effettuato, "${revRequestWord}" non è palindroma!`;
       console.log("La parola non è palindroma");
     }
     console.log("CORRETTO: è una stringa");
@@ -82,6 +75,9 @@ function palindroma(string) {
 8. In base al risultato si dichiara il vincitore.
 */
 
+//Riferimenti
+const pariDispariRef = document.getElementById('pariDispari');
+
 //1.
 const pariDispari = prompt("Scegli pari o dispari");
 console.log(pariDispari);
@@ -103,15 +99,19 @@ const result = sum(numUtente, numPc);
 console.log(result);
 
 //7.
-if (isNaN(pariDispari) && pariDispari === "pari") {
+if (isNaN(pariDispari)) {
   if (result % 2 === 0 && pariDispari === "pari") {
+    pariDispariRef.innerHTML = `L'utente ha scelto "pari" ed ha estratto a sorte il numero ${numUtente}, mentre il pc ha estratto ${numPc}. La somma dei numeri estratti è ${result}, per cui VINCE l'utente!`;
     console.log("Vince il l'utente");
   } else if (result % 2 && pariDispari === "dispari") {
+    pariDispariRef.innerHTML = `L'utente ha scelto "dispari", a sorte ha estratto il numero ${numUtente}, mentre il PC ha estratto ${numPc}. La somma dei numeri estratti è ${result}, per cui il vincitore è l'utente!`;
     console.log("Vince il l'utente");
   } else {
-    console.log("Vince il PC");
+    pariDispariRef.innerHTML = `L'utente ha estratto a sorte il numero ${numUtente}, mentre il PC ha estratto ${numPc}. La somma dei numeri estratti è ${result}, per cui il vince il PC!`;
+    console.log("VINCE il pc");
   }
 } else {
+  pariDispariRef.innerHTML = "INSERIRE \"pari\" o \"dispari\"";
   console.log('Inserire "pari" o "dispari"');
 }
 
