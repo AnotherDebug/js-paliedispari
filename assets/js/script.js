@@ -17,42 +17,37 @@
 3. Stampo il risultato corrispondente;
 */
 
+/* 
+
+*/
+
 // 1.
-const requestWord = prompt("Inserisci una parola");
+// const requestWord = prompt("Inserisci una parola");
 
-palindroma(requestWord);
+// palindroma(requestWord);
 
-
-
-
-
-/**
- * 
- * @param {string} string 
- */
-// 2.
-function palindroma(string) {
-  //2. a.
-  if (isNaN(string)) {
-    //2. b.
-    const revRequestWord = requestWord.split("").reverse().join("");
-    console.log(revRequestWord);
-    //2. c.
-    if (revRequestWord === requestWord) {
-      console.log("La parola è palindroma");
-    } else {
-      console.log("La parola non è palindroma");
-    }
-    console.log("CORRETTO: è una stringa");
-  } else {
-    console.log("ERRORE: Devi inserire una stringa");
-  }
-}
-
-
-
-
-
+// /**
+//  *
+//  * @param {string} string
+//  */
+// // 2.
+// function palindroma(string) {
+//   //2. a.
+//   if (isNaN(string)) {
+//     //2. b.
+//     const revRequestWord = requestWord.split("").reverse().join("");
+//     console.log(revRequestWord);
+//     //2. c.
+//     if (revRequestWord === requestWord) {
+//       console.log("La parola è palindroma");
+//     } else {
+//       console.log("La parola non è palindroma");
+//     }
+//     console.log("CORRETTO: è una stringa");
+//   } else {
+//     console.log("ERRORE: Devi inserire una stringa");
+//   }
+// }
 
 /* 
 ## Pari e Dispari ##
@@ -72,3 +67,28 @@ function palindroma(string) {
 5. Creo una funzione che somma i due numeri, dell'utente e del pc;
 6. In base al risultato si dichiara il vincitore.
 */
+
+//1.
+const pariDispari = prompt("Scegli pari o dispari");
+console.log(pariDispari);
+
+//3.
+const min = 1;
+const max = 5;
+
+//4.
+let utente = randomizer(min, max);
+console.log(utente);
+
+let pc = randomizer(min, max);
+console.log(pc);
+
+//2.
+/**
+ *
+ * @param {number} min
+ * @param {number} max
+ */
+function randomizer(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
