@@ -65,6 +65,7 @@
 3. Dichiaro due variabili che contengono il valore numerico minimo e massimo per generare il numero randomico;
 4. Dichiaro due variabili, una per l'utente, una per il pc che salva il valore numerico della funzione "random";
 5. Creo una funzione che somma i due numeri, dell'utente e del pc;
+6. Creo dei filtri per associare le stringhe pari dispari ai vari risultati;
 6. In base al risultato si dichiara il vincitore.
 */
 
@@ -77,13 +78,19 @@ const min = 1;
 const max = 5;
 
 //4.
-let utente = randomizer(min, max);
-console.log(utente);
+let numUtente = randomizer(min, max);
+console.log(numUtente);
 
-let pc = randomizer(min, max);
-console.log(pc);
+let numPc = randomizer(min, max);
+console.log(numPc);
 
 
+//6.
+if(isNaN(pariDispari)) {
+sum(numUtente, numPc);
+}else{
+  console.log('Inserire \"pari\" o "dispari"');
+};
 
 
 
@@ -108,5 +115,5 @@ function randomizer(min, max) {
  */
 function sum(n1,n2) {
   const somma = n1 + n2;
-  return sum;
+  return somma;
 };
