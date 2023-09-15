@@ -27,6 +27,10 @@
     display: flex;
 }
 
+.text-center {
+    text-align: center;
+}
+
 
 /* !"DEBUG" DA ELIMINARE TERMINATO IL CODICE*/
 .debug {
