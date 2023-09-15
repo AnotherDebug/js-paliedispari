@@ -48,3 +48,27 @@ function palindroma(string) {
     console.log("ERRORE: Devi inserire una stringa");
   }
 }
+
+
+
+
+
+
+/* 
+## Pari e Dispari ##
+
+- L’utente sceglie pari o dispari e inserisce un numero da 1 a 5;
+- Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione);
+- Sommiamo i due numeri;
+- Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione);
+- Dichiariamo chi ha vinto;
+
+################################################################################################################
+
+1. Dichiaro una variabile dove chiedo all'utente se sceglie pari o dispari;
+2. Creo una funzione per generare un numero randomico;
+3. Dichiaro due variabili che contengono il valore numerico minimo e massimo per generare il numero randomico;
+4. Dichiaro due variabili, una per l'utente, una per il pc che salva il valore numerico della funzione "random";
+5. Creo una funzione che somma i due numeri, dell'utente e del pc;
+6. In base al risultato si dichiara il vincitore.
+*/
