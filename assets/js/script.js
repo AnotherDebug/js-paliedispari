@@ -22,7 +22,7 @@
 */
 
 // Riferimenti
-const palindromaRef = document.getElementById('palindroma');
+const palindromaRef = document.getElementById("palindroma");
 
 //1.
 const requestWord = prompt("Inserisci una parola");
@@ -65,53 +65,60 @@ function palindroma(string) {
 
 ################################################################################################################
 
-1. Dichiaro una variabile dove chiedo all'utente se sceglie pari o dispari;
+1. Dichiaro una variabile dove chiedo all'utente se sceglie pari o dispari, ed un numero a caso compreso tra 1 e 5;
+  a. Controllo se la prima variabile è una stringa;
+  b. Controllo se la seconda variabile è un numero;
 2. Creo una funzione per generare un numero randomico;
 3. Dichiaro due variabili che contengono il valore numerico minimo e massimo per generare il numero randomico;
-4. Dichiaro due variabili, una per l'utente, una per il pc che salva il valore numerico della funzione "random";
+4. Dichiaro una variabile che salva il valore numerico della funzione "random" del PC;
 5. Creo una funzione che somma i due numeri, dell'utente e del pc;
-6. Dichiaro una variabile che raccoglie il risultato della funzione somma;  
-7. Creo dei filtri per associare le stringhe pari dispari ai vari risultati;
-8. In base al risultato si dichiara il vincitore.
+6. Dichiaro una variabile che raccoglie il risultato della funzione somma; 
+7. Creo una funzione che stablisce se il numero è pari o dispari; 
+8. Creo dei filtri per associare le stringhe pari dispari ai vari risultati;
+9. In base al risultato si dichiara il vincitore.
 */
 
 //Riferimenti
-const pariDispariRef = document.getElementById('pariDispari');
+const pariDispariRef = document.getElementById("pariDispari");
 
 //1.
 const pariDispari = prompt("Scegli pari o dispari");
+//1.b.
+const numUtente = parseInt(prompt("Scegli un numero compreso tra 1 e 5"));
 console.log(pariDispari);
+console.log(numUtente);
 
 //3.
 const min = 1;
 const max = 5;
 
 //4.
-let numUtente = randomizer(min, max);
-console.log(numUtente);
-
-let numPc = randomizer(min, max);
+const numPc = randomizer(min, max);
 console.log(numPc);
 
 //6.
 const result = sum(numUtente, numPc);
-
 console.log(result);
 
-//7.
+//1.a.
 if (isNaN(pariDispari)) {
-  if (result % 2 === 0 && pariDispari === "pari") {
-    pariDispariRef.innerHTML = `L'utente ha scelto "pari" ed ha estratto a sorte il numero ${numUtente}, mentre il pc ha estratto ${numPc}. La somma dei numeri estratti è ${result}, per cui VINCE l'utente!`;
-    console.log("Vince il l'utente");
-  } else if (result % 2 && pariDispari === "dispari") {
-    pariDispariRef.innerHTML = `L'utente ha scelto "dispari", a sorte ha estratto il numero ${numUtente}, mentre il PC ha estratto ${numPc}. La somma dei numeri estratti è ${result}, per cui il vincitore è l'utente!`;
-    console.log("Vince il l'utente");
+  //8.
+  if (isPari(result) && pariDispari === "pari") {
+    //9.
+    pariDispariRef.innerHTML = `L'utente ha scelto ${pariDispari}. Il risultato è ${result}, Vince l'utente!`;
+    console.log("Vince l'utente");
+  } else if (!isPari(result) && pariDispari === "dispari") {
+    //9.
+    pariDispariRef.innerHTML = `L'utente ha scelto ${pariDispari}. Il risultato è ${result}, Vince l'utente!`;
+    console.log("Vince l'utente");
   } else {
-    pariDispariRef.innerHTML = `L'utente ha estratto a sorte il numero ${numUtente}, mentre il PC ha estratto ${numPc}. La somma dei numeri estratti è ${result}, per cui il vince il PC!`;
-    console.log("VINCE il pc");
+    //9.
+    pariDispariRef.innerHTML = `L'utente ha scelto ${pariDispari}. Il risultato è ${result}, Vince il pc!`;
+    console.log("vince il pc");
   }
 } else {
-  pariDispariRef.innerHTML = "INSERIRE \"pari\" o \"dispari\"";
+  //1.a.
+  pariDispariRef.innerHTML = 'INSERIRE "pari" o "dispari"';
   console.log('Inserire "pari" o "dispari"');
 }
 
@@ -135,4 +142,16 @@ function randomizer(min, max) {
 function sum(n1, n2) {
   const somma = n1 + n2;
   return somma;
+}
+
+//7.
+/**
+ *
+ * @param {number} num
+ * @returns
+ */
+function isPari(num) {
+  if (num % 2) return false;
+
+  return true;
 }
